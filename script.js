@@ -15,15 +15,29 @@ tapLayer.addEventListener("click", () => {
 
 });
 
-introVideo.onended = () => {
+tapLayer.addEventListener("click", () => {
 
-  document.getElementById("intro")
-  .style.display = "none";
+  tapLayer.style.opacity = "0";
 
-  document.getElementById("main-content")
-  .style.display = "block";
+  setTimeout(() => {
 
-};
+    tapLayer.style.display = "none";
+
+  }, 800);
+
+  introVideo.play();
+
+  setTimeout(() => {
+
+    document.getElementById("intro")
+    .style.display = "none";
+
+    document.getElementById("main-content")
+    .style.display = "block";
+
+  }, 18000);
+
+});
 
 function scrollToChapters(){
 
