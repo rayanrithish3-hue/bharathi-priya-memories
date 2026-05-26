@@ -1,29 +1,12 @@
-const intro =
-document.getElementById("intro");
+const tapLayer =
+document.getElementById("tap-layer");
 
 const introVideo =
 document.getElementById("intro-video");
 
-const tapLayer =
-document.getElementById("tap-layer");
-
 tapLayer.addEventListener("click", () => {
 
   tapLayer.style.display = "none";
-
-  introVideo.play();
-
-});
-
-tapLayer.addEventListener("click", () => {
-
-  tapLayer.style.opacity = "0";
-
-  setTimeout(() => {
-
-    tapLayer.style.display = "none";
-
-  }, 800);
 
   introVideo.play();
 
