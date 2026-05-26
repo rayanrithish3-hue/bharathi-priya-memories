@@ -17,7 +17,8 @@ tapLayer.addEventListener("click", () => {
 
 introVideo.onended = () => {
 
-  intro.style.display = "none";
+  document.getElementById("intro")
+  .style.display = "none";
 
   document.getElementById("main-content")
   .style.display = "block";
