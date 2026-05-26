@@ -1,10 +1,23 @@
+const intro =
+document.getElementById("intro");
+
 const introVideo =
 document.getElementById("intro-video");
 
+const tapLayer =
+document.getElementById("tap-layer");
+
+tapLayer.addEventListener("click", () => {
+
+  tapLayer.style.display = "none";
+
+  introVideo.play();
+
+});
+
 introVideo.onended = () => {
 
-  document.getElementById("intro")
-  .style.display = "none";
+  intro.style.display = "none";
 
   document.getElementById("main-content")
   .style.display = "block";
