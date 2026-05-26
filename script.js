@@ -18,7 +18,7 @@ tapLayer.addEventListener("click", () => {
     document.getElementById("main-content")
     .style.display = "block";
 
-  }, 18000);
+  }, 20000);
 
 });
 
