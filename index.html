@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bharathi Priya's Memories</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- INTRO -->
+
+  <div id="intro">
+
+    <video autoplay muted playsinline id="intro-video">
+
+      <source src="intro.mp4" type="video/mp4">
+
+    </video>
+
+  </div>
+
+  <!-- MAIN -->
+
+  <div id="main-content">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <img src="main.jpg" class="hero-image">
+
+      <div class="overlay">
+
+        <div class="hero-text">
+
+          <h1>Bharathi Priya's Memories</h1>
+
+          <p>
+            The collection of memories,
+            funny moments,
+            crazy moments,
+            laughters etc...
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CHAPTERS -->
+
+    <section class="chapters">
+
+      <h2>Chapters</h2>
+
+      <div class="cards">
+
+        <!-- BP -->
+
+        <div class="card" onclick="openVideo('bp.mp4')">
+
+          <img src="bp.jpg">
+
+          <h3>BP</h3>
+
+        </div>
+
+        <!-- Rider -->
+
+        <div class="card" onclick="openVideo('rider.mp4')">
+
+          <img src="rider.jpg">
+
+          <h3>Rider 3000</h3>
+
+        </div>
+
+        <!-- Memories -->
+
+        <div class="card" onclick="openVideo('memories.mp4')">
+
+          <img src="memories.jpg">
+
+          <h3>Memories</h3>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- VIDEO PLAYER -->
+
+  <div id="video-popup">
+
+    <video controls autoplay id="movie-player">
+
+      <source id="video-source" src="">
+
+    </video>
+
+    <button onclick="closeVideo()">Close</button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
