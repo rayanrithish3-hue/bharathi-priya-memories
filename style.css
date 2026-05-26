@@ -154,6 +154,29 @@ button{
   padding:15px;
 }
 
+#tap-layer{
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:black;
+
+  z-index:999999;
+}
+
+#tap-layer h1{
+  color:#E50914;
+  font-size:55px;
+  letter-spacing:3px;
+}
+
 /* VIDEO */
 
 #video-popup{
