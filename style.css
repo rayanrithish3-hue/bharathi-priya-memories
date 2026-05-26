@@ -171,10 +171,16 @@ button{
   z-index:999999;
 }
 
-#tap-layer h1{
-  color:#E50914;
-  font-size:55px;
-  letter-spacing:3px;
+#tap-layer p{
+  color:white;
+  font-size:22px;
+  letter-spacing:1px;
+
+  text-align:center;
+  line-height:1.8;
+  padding:0 30px;
+
+  animation:pulse 1.5s infinite;
 }
 
 /* VIDEO */
