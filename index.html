@@ -1,9 +1,11 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html>
 
 <head>
 
-  <title>Bharathi Priya's Memories ❣️</title>
+  <title>Bharathi Priya's Memories</title>
 
   <link rel="stylesheet" href="style.css">
 
@@ -36,50 +38,98 @@
 
   <div id="main-content">
 
-    <!-- NAVBAR -->
+    <!-- HERO IMAGE -->
 
-    <nav class="navbar">
+    <section class="mobile-hero">
 
-      <h1 class="logo">NETFLIX</h1>
+      <img src="main.jpg" class="mobile-banner">
 
-    </nav>
+    </section>
 
-    <!-- HERO -->
+    <!-- DETAILS -->
 
-    <section class="hero">
+    <section class="details">
 
-      <img src="main.jpg" class="hero-image">
+      <p class="netflix-text">NETFLIX</p>
 
-      <div class="overlay">
+      <h1>Bharathi Priya's Memories</h1>
 
-        <div class="hero-text">
+      <div class="meta">
 
-          <h1>Bharathi Priya's Memories ❣️</h1>
+        <span>2026</span>
 
-          <p>
-            The collection of memories,
-            funny moments,
-            crazy moments,
-            laughters etc...
-          </p>
+      </div>
 
-          <div class="buttons">
+      <!-- PLAY -->
 
-            <button class="play-btn"
-              onclick="scrollToChapters()">
+      <button class="main-play"
+        onclick="scrollToChapters()">
 
-              ▶ Play
+        ▶ Play
 
-            </button>
+      </button>
 
-            <button class="info-btn"
-              onclick="openInfo()">
+      <!-- DOWNLOAD -->
 
-              More Info
+      <button class="download-btn">
 
-            </button>
+        ⬇ Download
 
-          </div>
+      </button>
+
+      <!-- DESCRIPTION -->
+
+      <p class="description">
+
+        The collection of memories,
+        funny moments,
+        crazy moments,
+        laughters etc...
+
+      </p>
+
+      <!-- STARRING -->
+
+      <p class="starring">
+
+        <b>Starring:</b> Bharathi Priya
+
+      </p>
+
+      <!-- ACTIONS -->
+
+      <div class="action-row">
+
+        <!-- MY LIST -->
+
+        <div class="action-item"
+          onclick="toggleList()">
+
+          <span id="list-icon">＋</span>
+
+          <p>My List</p>
+
+        </div>
+
+        <!-- RATE -->
+
+        <div class="action-item"
+          onclick="openRating()">
+
+          👍
+
+          <p>Rate</p>
+
+        </div>
+
+        <!-- SHARE -->
+
+        <div class="action-item"
+          onclick="shareWebsite()">
+
+          ↗
+
+          <p>Share</p>
 
         </div>
 
@@ -89,11 +139,14 @@
 
     <!-- CHAPTERS -->
 
-    <section class="chapters" id="chapters">
+    <section class="chapters"
+      id="chapters">
 
       <h2>Chapters</h2>
 
       <div class="cards">
+
+        <!-- BP -->
 
         <div class="card"
           onclick="openVideo('bp.mp4')">
@@ -104,6 +157,8 @@
 
         </div>
 
+        <!-- RIDER -->
+
         <div class="card"
           onclick="openVideo('rider.mp4')">
 
@@ -112,6 +167,8 @@
           <h3>Rider 3000</h3>
 
         </div>
+
+        <!-- MEMORIES -->
 
         <div class="card"
           onclick="openVideo('memories.mp4')">
@@ -159,13 +216,43 @@
       <p><b>Nickname:</b> Cino Rider</p>
 
       <p>
+
         The collection of memories,
         funny moments,
         crazy moments,
         laughters etc...
+
       </p>
 
       <button onclick="closeInfo()">
+
+        Close
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- RATING POPUP -->
+
+  <div id="rating-popup">
+
+    <div class="rating-box">
+
+      <h2>Rate This</h2>
+
+      <div class="stars">
+
+        <span onclick="rateStar(this)">★</span>
+        <span onclick="rateStar(this)">★</span>
+        <span onclick="rateStar(this)">★</span>
+        <span onclick="rateStar(this)">★</span>
+        <span onclick="rateStar(this)">★</span>
+
+      </div>
+
+      <button onclick="closeRating()">
 
         Close
 
