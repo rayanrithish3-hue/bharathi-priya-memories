@@ -1,8 +1,12 @@
+/* script.js */
+
 const tapLayer =
 document.getElementById("tap-layer");
 
 const introVideo =
 document.getElementById("intro-video");
+
+/* INTRO */
 
 tapLayer.addEventListener("click", () => {
 
@@ -18,9 +22,11 @@ tapLayer.addEventListener("click", () => {
     document.getElementById("main-content")
     .style.display = "block";
 
-  }, 20000);
+  }, 18000);
 
 });
+
+/* PLAY BUTTON */
 
 function scrollToChapters(){
 
@@ -30,6 +36,8 @@ function scrollToChapters(){
   });
 
 }
+
+/* VIDEO */
 
 function openVideo(videoName){
 
@@ -58,6 +66,8 @@ function closeVideo(){
 
 }
 
+/* INFO */
+
 function openInfo(){
 
   document.getElementById("info-popup")
@@ -69,5 +79,71 @@ function closeInfo(){
 
   document.getElementById("info-popup")
   .style.display = "none";
+
+}
+
+/* MY LIST */
+
+let added = false;
+
+function toggleList(){
+
+  const icon =
+  document.getElementById("list-icon");
+
+  added = !added;
+
+  if(added){
+
+    icon.innerHTML = "✓";
+
+  }
+
+  else{
+
+    icon.innerHTML = "＋";
+
+  }
+
+}
+
+/* RATING */
+
+function openRating(){
+
+  document.getElementById("rating-popup")
+  .style.display = "flex";
+
+}
+
+function closeRating(){
+
+  document.getElementById("rating-popup")
+  .style.display = "none";
+
+}
+
+function rateStar(star){
+
+  star.style.color = "gold";
+
+}
+
+/* SHARE */
+
+function shareWebsite(){
+
+  navigator.share({
+
+    title:
+    "Bharathi Priya's Memories",
+
+    text:
+    "Check this out",
+
+    url:
+    window.location.href
+
+  });
 
 }
