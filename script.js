@@ -1,37 +1,112 @@
 /* script.js */
 
-const tapLayer =
-document.getElementById("tap-layer");
+let pin = "";
 
-const introVideo =
-document.getElementById("intro-video");
+/* PIN */
 
-/* INTRO */
+function enterPin(num){
 
-tapLayer.addEventListener("click", () => {
+  if(pin.length < 4){
 
-  tapLayer.style.display = "none";
+    pin += num;
+
+    updateDots();
+
+  }
+
+}
+
+function clearPin(){
+
+  pin = pin.slice(0,-1);
+
+  updateDots();
+
+}
+
+function updateDots(){
+
+  const dots =
+  document.querySelectorAll(".dot");
+
+  dots.forEach((dot,index)=>{
+
+    if(index < pin.length){
+
+      dot.style.background =
+      "#E50914";
+
+    }
+
+    else{
+
+      dot.style.background =
+      "transparent";
+
+    }
+
+  });
+
+}
+
+function checkPin(){
+
+  if(pin === "5689"){
+
+    document.getElementById(
+      "password-screen"
+    ).style.display = "none";
+
+    document.getElementById(
+      "intro-touch"
+    ).style.display = "flex";
+
+  }
+
+}
+
+/* TOUCH SCREEN */
+
+document.getElementById(
+  "intro-touch"
+).addEventListener("click",()=>{
+
+  document.getElementById(
+    "intro-touch"
+  ).style.display = "none";
+
+  document.getElementById(
+    "intro"
+  ).style.display = "block";
+
+  const introVideo =
+  document.getElementById(
+    "intro-video"
+  );
 
   introVideo.play();
 
-  setTimeout(() => {
+  setTimeout(()=>{
 
-    document.getElementById("intro")
-    .style.display = "none";
+    document.getElementById(
+      "intro"
+    ).style.display = "none";
 
-    document.getElementById("main-content")
-    .style.display = "block";
+    document.getElementById(
+      "main-content"
+    ).style.display = "block";
 
-  }, 18000);
+  },18000);
 
 });
 
-/* PLAY BUTTON */
+/* PLAY */
 
 function scrollToChapters(){
 
-  document.getElementById("chapters")
-  .scrollIntoView({
+  document.getElementById(
+    "chapters"
+  ).scrollIntoView({
     behavior:"smooth"
   });
 
@@ -41,14 +116,18 @@ function scrollToChapters(){
 
 function openVideo(videoName){
 
-  document.getElementById("video-popup")
-  .style.display = "flex";
+  document.getElementById(
+    "video-popup"
+  ).style.display = "flex";
 
-  document.getElementById("video-source")
-  .src = videoName;
+  document.getElementById(
+    "video-source"
+  ).src = videoName;
 
   const player =
-  document.getElementById("movie-player");
+  document.getElementById(
+    "movie-player"
+  );
 
   player.load();
 
@@ -58,27 +137,13 @@ function openVideo(videoName){
 
 function closeVideo(){
 
-  document.getElementById("video-popup")
-  .style.display = "none";
+  document.getElementById(
+    "video-popup"
+  ).style.display = "none";
 
-  document.getElementById("movie-player")
-  .pause();
-
-}
-
-/* INFO */
-
-function openInfo(){
-
-  document.getElementById("info-popup")
-  .style.display = "flex";
-
-}
-
-function closeInfo(){
-
-  document.getElementById("info-popup")
-  .style.display = "none";
+  document.getElementById(
+    "movie-player"
+  ).pause();
 
 }
 
@@ -89,7 +154,9 @@ let added = false;
 function toggleList(){
 
   const icon =
-  document.getElementById("list-icon");
+  document.getElementById(
+    "list-icon"
+  );
 
   added = !added;
 
@@ -111,15 +178,17 @@ function toggleList(){
 
 function openRating(){
 
-  document.getElementById("rating-popup")
-  .style.display = "flex";
+  document.getElementById(
+    "rating-popup"
+  ).style.display = "flex";
 
 }
 
 function closeRating(){
 
-  document.getElementById("rating-popup")
-  .style.display = "none";
+  document.getElementById(
+    "rating-popup"
+  ).style.display = "none";
 
 }
 
@@ -145,5 +214,23 @@ function shareWebsite(){
     window.location.href
 
   });
+
+}
+
+/* DOWNLOAD */
+
+function openDownloadPopup(){
+
+  document.getElementById(
+    "download-popup"
+  ).style.display = "flex";
+
+}
+
+function closeDownloadPopup(){
+
+  document.getElementById(
+    "download-popup"
+  ).style.display = "none";
 
 }
