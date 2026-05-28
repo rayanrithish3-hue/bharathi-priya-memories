@@ -13,6 +13,54 @@
 
 <body>
 
+  <!-- PASSWORD SCREEN -->
+
+  <div id="password-screen">
+
+    <h1>ENTER PASSWORD</h1>
+
+    <div id="pin-display">
+
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+
+    </div>
+
+    <div class="keypad">
+
+      <button onclick="enterPin('1')">1</button>
+      <button onclick="enterPin('2')">2</button>
+      <button onclick="enterPin('3')">3</button>
+
+      <button onclick="enterPin('4')">4</button>
+      <button onclick="enterPin('5')">5</button>
+      <button onclick="enterPin('6')">6</button>
+
+      <button onclick="enterPin('7')">7</button>
+      <button onclick="enterPin('8')">8</button>
+      <button onclick="enterPin('9')">9</button>
+
+      <button onclick="clearPin()">⌫</button>
+      <button onclick="enterPin('0')">0</button>
+      <button onclick="checkPin()">✓</button>
+
+    </div>
+
+  </div>
+
+  <!-- TOUCH SCREEN -->
+
+  <div id="intro-touch">
+
+    <p>
+      Bharathi Priya,<br>
+      Touch anywhere to begin the experience.
+    </p>
+
+  </div>
+
   <!-- INTRO -->
 
   <div id="intro">
@@ -23,22 +71,13 @@
 
     </video>
 
-    <div id="tap-layer">
-
-      <p>
-        Bharathi Priya,<br>
-        Touch anywhere to begin the experience.
-      </p>
-
-    </div>
-
   </div>
 
   <!-- MAIN CONTENT -->
 
   <div id="main-content">
 
-    <!-- HERO IMAGE -->
+    <!-- HERO -->
 
     <section class="mobile-hero">
 
@@ -71,7 +110,8 @@
 
       <!-- DOWNLOAD -->
 
-      <button class="download-btn">
+      <button class="download-btn"
+        onclick="openDownloadPopup()">
 
         ⬇ Download
 
@@ -81,10 +121,8 @@
 
       <p class="description">
 
-        The collection of memories,
-        funny moments,
-        crazy moments,
-        laughters etc...
+        A beautiful archive of memories, emotions, laughter, adventures, and priceless moments shared together. 
+        From chaos to comfort, every chapter tells a story we’ll never forget.
 
       </p>
 
@@ -116,7 +154,7 @@
         <div class="action-item"
           onclick="openRating()">
 
-          👍
+          ☆
 
           <p>Rate</p>
 
@@ -127,7 +165,7 @@
         <div class="action-item"
           onclick="shareWebsite()">
 
-          ↗
+          ⤴
 
           <p>Share</p>
 
@@ -146,8 +184,6 @@
 
       <div class="cards">
 
-        <!-- BP -->
-
         <div class="card"
           onclick="openVideo('bp.mp4')">
 
@@ -157,8 +193,6 @@
 
         </div>
 
-        <!-- RIDER -->
-
         <div class="card"
           onclick="openVideo('rider.mp4')">
 
@@ -167,8 +201,6 @@
           <h3>Rider 3000</h3>
 
         </div>
-
-        <!-- MEMORIES -->
 
         <div class="card"
           onclick="openVideo('memories.mp4')">
@@ -203,37 +235,6 @@
 
   </div>
 
-  <!-- INFO POPUP -->
-
-  <div id="info-popup">
-
-    <div class="info-box">
-
-      <h1>Bharathi Priya's Memories</h1>
-
-      <p><b>In Frame:</b> Bharathi Priya</p>
-
-      <p><b>Nickname:</b> Cino Rider</p>
-
-      <p>
-
-        The collection of memories,
-        funny moments,
-        crazy moments,
-        laughters etc...
-
-      </p>
-
-      <button onclick="closeInfo()">
-
-        Close
-
-      </button>
-
-    </div>
-
-  </div>
-
   <!-- RATING POPUP -->
 
   <div id="rating-popup">
@@ -253,6 +254,42 @@
       </div>
 
       <button onclick="closeRating()">
+
+        Close
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- DOWNLOAD POPUP -->
+
+  <div id="download-popup">
+
+    <div class="download-box">
+
+      <h2>Download Chapters</h2>
+
+      <a href="bp.mp4" download>
+
+        BP
+
+      </a>
+
+      <a href="rider.mp4" download>
+
+        Rider 3000
+
+      </a>
+
+      <a href="memories.mp4" download>
+
+        Memories
+
+      </a>
+
+      <button onclick="closeDownloadPopup()">
 
         Close
 
