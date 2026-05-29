@@ -42,7 +42,9 @@ body{
 .dot{
   width:18px;
   height:18px;
+
   border:2px solid #E50914;
+
   border-radius:50%;
 }
 
@@ -88,9 +90,11 @@ body{
 
 #intro-touch p{
   color:white;
+
   font-size:22px;
 
   text-align:center;
+
   line-height:1.8;
 
   animation:pulse 1.5s infinite;
@@ -116,6 +120,7 @@ body{
 
 #intro{
   position:fixed;
+
   width:100%;
   height:100vh;
 
@@ -129,10 +134,11 @@ body{
 #intro-video{
   width:100%;
   height:100%;
+
   object-fit:cover;
 }
 
-/* PROFILE */
+/* PROFILE SCREEN */
 
 #profile-screen{
   position:fixed;
@@ -149,8 +155,11 @@ body{
   z-index:999999;
 }
 
+/* SLIDER */
+
 .slider{
   position:absolute;
+
   width:100%;
   height:100%;
 }
@@ -161,7 +170,9 @@ body{
   width:100%;
   height:100%;
 
-  object-fit:cover;
+  object-fit:contain;
+
+  background:black;
 
   opacity:0;
 
@@ -172,6 +183,8 @@ body{
   opacity:1;
 }
 
+/* OVERLAY */
+
 .profile-overlay{
   position:absolute;
 
@@ -180,8 +193,9 @@ body{
 
   background:linear-gradient(
     to top,
-    rgba(0,0,0,0.95),
-    rgba(0,0,0,0.4)
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.15)
   );
 
   display:flex;
@@ -189,13 +203,24 @@ body{
   justify-content:flex-end;
   align-items:center;
 
-  padding-bottom:120px;
+  padding-bottom:55px;
+
+  box-sizing:border-box;
 }
 
+/* TITLE */
+
 .profile-overlay h2{
-  font-size:35px;
-  margin-bottom:40px;
+  font-size:32px;
+
+  margin-bottom:35px;
+
+  text-align:center;
+
+  padding:0 20px;
 }
+
+/* PROFILES */
 
 .profiles{
   display:flex;
@@ -231,6 +256,57 @@ body{
   font-size:20px;
 }
 
+/* MOBILE FIX */
+
+@media(max-width:768px){
+
+  .profile-overlay{
+
+    justify-content:flex-end;
+
+    padding-bottom:40px;
+
+  }
+
+  .profile-overlay h2{
+
+    font-size:26px;
+
+    margin-bottom:28px;
+
+  }
+
+  .profiles{
+
+    gap:25px;
+
+  }
+
+  .profile-icon{
+
+    width:85px;
+    height:85px;
+
+    font-size:30px;
+
+    border-radius:18px;
+  }
+
+  .profile-card p{
+
+    font-size:16px;
+
+    max-width:95px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+  }
+
+}
+
 /* MAIN */
 
 #main-content{
@@ -240,6 +316,7 @@ body{
 .mobile-banner{
   width:100%;
   height:55vh;
+
   object-fit:cover;
 }
 
@@ -264,41 +341,52 @@ body{
 
 .main-play{
   width:100%;
+
   padding:16px;
+
   margin-top:20px;
 
   background:white;
+
   color:black;
 
   font-size:22px;
   font-weight:bold;
 
   border:none;
+
   border-radius:5px;
 }
 
 .download-btn{
   width:100%;
+
   padding:16px;
+
   margin-top:15px;
 
   background:#2b2b2b;
+
   color:white;
 
   font-size:20px;
 
   border:none;
+
   border-radius:5px;
 }
 
 .description{
   margin-top:25px;
+
   font-size:20px;
+
   line-height:1.6;
 }
 
 .starring{
   margin-top:20px;
+
   color:#aaa;
 }
 
@@ -307,6 +395,7 @@ body{
 .action-row{
   display:flex;
   justify-content:space-around;
+
   margin-top:35px;
 }
 
@@ -329,19 +418,24 @@ body{
 .cards{
   display:flex;
   gap:20px;
+
   overflow-x:auto;
 }
 
 .card{
   min-width:250px;
+
   background:#181818;
+
   border-radius:10px;
+
   overflow:hidden;
 }
 
 .card img{
   width:100%;
   height:350px;
+
   object-fit:cover;
 }
 
@@ -395,8 +489,11 @@ body{
 
 .rating-box{
   background:#181818;
+
   padding:25px;
+
   border-radius:10px;
+
   text-align:center;
 }
 
@@ -406,7 +503,9 @@ body{
 
 .stars span{
   font-size:45px;
+
   margin:8px;
+
   color:white;
 }
 
@@ -472,7 +571,9 @@ body{
 
 .download-box{
   background:#181818;
+
   padding:30px;
+
   border-radius:10px;
 
   width:80%;
@@ -480,6 +581,7 @@ body{
 
 .download-box a{
   display:block;
+
   margin-top:20px;
 
   color:white;
