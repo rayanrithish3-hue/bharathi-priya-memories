@@ -2,7 +2,7 @@
 
 let pin = "";
 
-/* PIN */
+/* PASSWORD */
 
 function enterPin(num){
 
@@ -93,12 +93,51 @@ document.getElementById(
     ).style.display = "none";
 
     document.getElementById(
-      "main-content"
+      "profile-screen"
     ).style.display = "block";
 
   },18000);
 
 });
+
+/* PROFILE */
+
+function openMainContent(){
+
+  document.getElementById(
+    "profile-screen"
+  ).style.display = "none";
+
+  document.getElementById(
+    "main-content"
+  ).style.display = "block";
+
+}
+
+/* SLIDER */
+
+const slides =
+document.querySelectorAll(".slide");
+
+let currentSlide = 0;
+
+setInterval(()=>{
+
+  slides[currentSlide]
+  .classList.remove("active");
+
+  currentSlide++;
+
+  if(currentSlide >= slides.length){
+
+    currentSlide = 0;
+
+  }
+
+  slides[currentSlide]
+  .classList.add("active");
+
+},1500);
 
 /* PLAY */
 
@@ -195,6 +234,26 @@ function closeRating(){
 function rateStar(star){
 
   star.style.color = "gold";
+
+}
+
+function submitRating(){
+
+  document.getElementById(
+    "rating-popup"
+  ).style.display = "none";
+
+  document.getElementById(
+    "thanks-popup"
+  ).style.display = "flex";
+
+  setTimeout(()=>{
+
+    document.getElementById(
+      "thanks-popup"
+    ).style.display = "none";
+
+  },3000);
 
 }
 
