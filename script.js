@@ -65,7 +65,7 @@ function checkPin(){
 
 }
 
-/* TOUCH SCREEN */
+/* TOUCH */
 
 document.getElementById(
   "intro-touch"
