@@ -61,7 +61,7 @@
 
   </div>
 
-  <!-- INTRO -->
+  <!-- INTRO VIDEO -->
 
   <div id="intro">
 
@@ -70,6 +70,63 @@
       <source src="intro.mp4" type="video/mp4">
 
     </video>
+
+  </div>
+
+  <!-- PROFILE SCREEN -->
+
+  <div id="profile-screen">
+
+    <!-- AUTO SLIDER -->
+
+    <div class="slider">
+
+      <img src="slide1.jpg" class="slide active">
+      <img src="slide2.jpg" class="slide">
+      <img src="slide3.jpg" class="slide">
+
+    </div>
+
+    <!-- OVERLAY -->
+
+    <div class="profile-overlay">
+
+      <h2>Choose your profile</h2>
+
+      <div class="profiles">
+
+        <!-- MAIN PROFILE -->
+
+        <div class="profile-card"
+          onclick="openMainContent()">
+
+          <div class="profile-icon">
+
+            BP
+
+          </div>
+
+          <p>bharathipriya3000</p>
+
+        </div>
+
+        <!-- ADD -->
+
+        <div class="profile-card">
+
+          <div class="profile-icon add-icon">
+
+            ＋
+
+          </div>
+
+          <p>Add</p>
+
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -121,8 +178,11 @@
 
       <p class="description">
 
-        A beautiful archive of memories, emotions, laughter, adventures, and priceless moments shared together. 
-        From chaos to comfort, every chapter tells a story we’ll never forget.
+        A beautiful archive of memories,
+        emotions, laughter, adventures,
+        and priceless moments shared together.
+        From chaos to comfort, every chapter
+        tells a story we’ll never forget.
 
       </p>
 
@@ -184,6 +244,8 @@
 
       <div class="cards">
 
+        <!-- BP -->
+
         <div class="card"
           onclick="openVideo('bp.mp4')">
 
@@ -193,6 +255,8 @@
 
         </div>
 
+        <!-- RIDER -->
+
         <div class="card"
           onclick="openVideo('rider.mp4')">
 
@@ -201,6 +265,8 @@
           <h3>Rider 3000</h3>
 
         </div>
+
+        <!-- MEMORIES -->
 
         <div class="card"
           onclick="openVideo('memories.mp4')">
@@ -253,11 +319,34 @@
 
       </div>
 
-      <button onclick="closeRating()">
+      <button onclick="submitRating()">
 
-        Close
+        Submit
 
       </button>
+
+    </div>
+
+  </div>
+
+  <!-- THANKS POPUP -->
+
+  <div id="thanks-popup">
+
+    <div class="thanks-box">
+
+      <p class="rithish-name">
+
+        Rithish
+
+      </p>
+
+      <h2>
+
+        Thanks for the Rating
+        Bharathi Priya ❤️
+
+      </h2>
 
     </div>
 
